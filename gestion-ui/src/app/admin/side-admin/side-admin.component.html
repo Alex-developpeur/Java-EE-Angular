@@ -1,0 +1,19 @@
+<mat-nav-list>
+	<fa-icon [icon]="faUser"></fa-icon>&nbsp;{{userName}}
+	<mat-divider class="mt-3"></mat-divider>
+	<a mat-list-item routerLink='/admin/tableau-de-bord' routerLinkActive="active-link" class="side-list">
+		<mat-icon>dashboard</mat-icon>&nbsp;Tableau de bord
+	</a>
+	<a mat-list-item routerLink='/admin/profil' routerLinkActive="active-link" class="side-list">
+		<mat-icon>account_box</mat-icon>&nbsp;Profil
+	</a>
+	<a mat-list-item routerLink='/admin/groupes' routerLinkActive="active-link" class="side-list">
+		<mat-icon>groups</mat-icon>&nbsp;Groupes
+	</a>
+	<a mat-list-item routerLink='/admin/administrateurs' routerLinkActive="active-link" class="side-list">
+		<mat-icon>engineering</mat-icon>&nbsp;Administrateurs
+	</a>
+	<a mat-list-item routerLink='/admin/utilisateurs' routerLinkActive="active-link" class="side-list">
+		<mat-icon>person</mat-icon>&nbsp;Utilisateurs
+	</a>
+</mat-nav-list>

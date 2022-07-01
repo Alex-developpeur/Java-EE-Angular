@@ -1,0 +1,53 @@
+<div class="main-controller">
+    <div class="container col-lg-6">
+        <h1>Connexion</h1>
+        <hr class="mb-5">
+        <div class="card fond-card">
+            <div class="card-body">
+                <form class="form-group">
+                    <div class="alert alert-warning" *ngIf='invalidLogin'>{{errorMessage}}</div>
+                    <div class="alert alert-success" *ngIf='loginSuccess'>{{successMessage}}</div>
+
+                    <label for="email">Identifiant :</label>
+                    <div class="input-group mb-4">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text" id="basic-addon1">
+                                <fa-icon [icon]="faUser"></fa-icon>
+                            </span>
+                        </div>
+                        <input type="text" class="form-control" id="username" [(ngModel)]="username" placeholder="Entrez votre e-mail"
+                        name="username">
+                    </div>
+
+                    <label for="pwd">Mot de passe :</label>
+                    <div class="input-group">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text" id="basic-addon1">
+                                <fa-icon [icon]="faKey"></fa-icon>
+                            </span>
+                        </div>
+                        <input type="password" class="form-control" [(ngModel)]="password" id="password" placeholder="Entrez votre mot de passe" name="password">
+                    </div>
+
+                    <div class="row mt-5">
+                        <div class="col-lg-6">
+                            <button type="submit" (click)=handleLogin() mat-raised-button color="primary" class="w-100">
+                                <i class="fa fa-sign-in" aria-hidden="true"></i>&nbsp;Connectez-vous
+                            </button>
+                        </div>
+                        <div class="col-lg-6">
+                            <button type="button" mat-raised-button (click)=handleLogin() color="warn" class="w-100">
+                                <i class="fa fa-envelope" aria-hidden="true"></i>&nbsp;Mot de passe oublié...
+                            </button>
+                        </div>
+                    </div>
+                    <div class="row mt-4">
+                        <div class="col-lg-12">
+                            <a routerLink="/nouvel-utilisateur" routerLinkActive="active">Créer un nouveau compte</a>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

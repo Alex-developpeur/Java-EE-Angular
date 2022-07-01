@@ -1,0 +1,48 @@
+<div class="row">
+	<div class="col-lg-6">
+		<h2 class="titre-page">Modifier l'administrateur</h2>
+		<hr class="mb-5">
+		<form [formGroup]="adminForm" (ngSubmit)="onSubmit()">
+			<p>
+				<mat-form-field appearance="legacy" class="w-100">
+					<mat-label>Nom</mat-label>
+					<input matInput type="text" placeholder="Entrer un nom" formControlName="nomForm">
+					<mat-error *ngIf="adminForm.get('nomForm').errors">{{ validFormNom() }}</mat-error>
+				</mat-form-field>
+			</p>
+			<p>
+				<mat-form-field appearance="legacy" class="w-100">
+					<mat-label>Email</mat-label>
+					<input matInput type="text" placeholder="Entrer un email" formControlName="emailForm" required>
+					<mat-error *ngIf="adminForm.get('emailForm').errors">{{ validFormEmail() }}</mat-error>
+				</mat-form-field>
+			</p>
+			<p>
+				<mat-form-field appearance="legacy" class="w-100">
+					<mat-label>Mot de passe</mat-label>
+					<input matInput type="password" placeholder="Entrer un mot de passe" formControlName="mdpForm" required>
+					<mat-error *ngIf="adminForm.get('mdpForm').errors">{{ validFormMDP() }}</mat-error>
+				</mat-form-field>
+			</p>
+			<p>
+				<mat-form-field appearance="legacy" class="w-100">
+					<mat-label>Confirmation du mot de passe</mat-label>
+					<input matInput type="password" placeholder="Entrer le même mot de passe" formControlName="mdpConfirmForm">
+					<mat-error *ngIf="adminForm.get('mdpConfirmForm').errors">{{ validFormMDPConfirm() }}</mat-error>
+				</mat-form-field>
+			</p>
+			<div class="row mt-5">
+				<div class="col-lg-4">
+					<button type="submit" mat-raised-button color="primary" class="w-100">
+						<i class="fa fa-floppy-o" aria-hidden="true"></i>&nbsp;Valider
+					</button>
+				</div>		
+				<div class="col-lg-4">
+					<button type="button" mat-raised-button (click)="onCancel()" color="warn" class="w-100">
+						<i class="fa fa-times" aria-hidden="true"></i>&nbsp;Annuler
+					</button>
+				</div>
+			</div>
+		</form>
+	</div>
+</div>

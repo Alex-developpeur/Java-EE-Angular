@@ -1,0 +1,34 @@
+<div class="row">
+	<div class="col-lg-10">
+		<h2 class="titre-page">Profil de l'administrateur</h2>
+		<hr class="mb-5">
+		<mat-card class="mat-elevation-z5">
+			<div *ngIf="administrateur">
+				<p>
+					<label><b>Nom : </b></label> {{administrateur.nom}}
+				</p>
+				<p>
+					<label><b>E-mail : </b></label> {{administrateur.email}}
+				</p>
+			</div>
+		</mat-card>
+
+		<div class="row mt-5">
+			<div class="col-lg-4">
+				<button (click)="tableauDeBord()" mat-raised-button color="accent" class="w-100">
+					<i class="fa fa-list-alt" aria-hidden="true"></i>&nbsp;Tableau de bord.
+				</button>
+			</div>
+			<div class="col-lg-4">
+				<button (click)="updateAdministrateur(administrateur.id)" mat-raised-button color="primary" class="w-100">
+					<i class="fa fa-pencil-square-o" aria-hidden="true"></i>&nbsp;Editer votre compte
+				</button>
+			</div>
+			<div class="col-lg-4">
+				<button type="button" mat-raised-button (click)="openDialog(administrateur.id)" color="warn" class="w-100">
+					<i class="fa fa-trash" aria-hidden="true"></i>&nbsp;Supprimer votre compte
+				</button>
+			</div>
+		</div>
+	</div>
+</div>

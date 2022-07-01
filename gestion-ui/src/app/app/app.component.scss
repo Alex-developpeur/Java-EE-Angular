@@ -1,0 +1,36 @@
+@import "../../assets/styles/utils/variables";
+
+mat-sidenav-container {
+    position: relative;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+mat-sidenav {
+    position: fixed;
+    top: 50px;
+    background: $background-side-bar;
+    color: $color-side-bar;
+    padding: 30px 10px 10px 10px;
+    width: 13em;
+}
+
+
+@media (min-width: 1500px) {
+    mat-sidenav {
+//      height: 90vh;
+        padding: 54px 10px 10px 10px;
+    }
+}
+
+
+mat-sidenav-content {
+//    min-height: 100%;
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    top: 50px;
+    min-height: 100vh;
+    background: $background-app;
+}
