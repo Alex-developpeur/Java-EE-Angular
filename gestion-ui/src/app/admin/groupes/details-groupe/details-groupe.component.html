@@ -1,0 +1,38 @@
+<h2 class="titre-page">Details du groupe</h2> 
+<div class="row">
+	<div class="col-lg-6">
+		<div class="card card-affichage">
+
+			<div *ngIf="groupe">
+				<div>
+					<label><b>ID: </b></label> {{groupe.id}}
+				</div>
+				<div>
+					<label><b>Nom: </b></label> {{groupe.nom}}
+				</div>
+				<div>
+					<label><b>Description: </b></label> {{groupe.description}}
+				</div>  
+			</div>
+		</div>
+
+		<div class="row mt-5">
+			<div class="col-lg-4">
+				<button (click)="listGroupe()" class="btn btn-primary w-100">
+					<i class="fa fa-list-alt" aria-hidden="true"></i>&nbsp;Liste des groupes.
+				</button>
+			</div>
+			<div class="col-lg-4">
+				<button (click)="updateGroupe(groupe.id)" class="btn btn-info w-100">
+					<i class="fa fa-pencil-square-o" aria-hidden="true"></i>&nbsp;Editer
+				</button>
+			</div>
+			<div class="col-lg-4">
+				<button type="button" mat-raised-button (click)="openDialog(groupe.id)" class="btn btn-danger w-100">
+					<i class="fa fa-trash" aria-hidden="true"></i>&nbsp;Supprimer
+				</button>
+			</div>
+		</div>
+
+	</div>
+</div>

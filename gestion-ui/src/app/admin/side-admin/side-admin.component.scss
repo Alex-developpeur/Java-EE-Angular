@@ -1,0 +1,15 @@
+@import "../../../assets/styles/utils/variables";
+
+.side-list {
+	color: $color-side-bar;
+}
+
+a:hover {
+	color: $colour-primary;	
+	background: $background-side-bar !important;
+}
+
+.active-link {
+	color: #64a19d;
+	background: $background-side-bar !important;
+}

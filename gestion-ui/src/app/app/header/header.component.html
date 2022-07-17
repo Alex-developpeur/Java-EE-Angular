@@ -1,0 +1,39 @@
+<header class="app-footer dark-theme">
+<!--
+    <nav class="navbar fixed-top navbar-expand-md navbar-dark bg-dark">
+        <div>
+        	<a routerLink="/" class="navbar-brand">
+        		<img src="/assets/images/logo.ico" width="30" height="30" class="d-inline-block align-top" alt="">&nbsp;Fatum
+        	</a>
+        </div>
+        <ul class="navbar-nav navbar-collapse justify-content-end">
+            <li>
+                <a class="nav-link" routerLink="/test">
+                <fa-icon [icon]="faCode"></fa-icon>&nbsp;Test</a>
+            </li>
+            <li>
+                <a *ngIf="isLoggedIn" class="nav-link" routerLink="/connexion" (click)=handleLogout()>
+                	<fa-icon [icon]="faSignOutAlt"></fa-icon>&nbsp;Déconnexion</a>
+                <a *ngIf="!isLoggedIn" class="nav-link" routerLink="/connexion">
+                	<fa-icon [icon]="faShieldAlt"></fa-icon>&nbsp;Connexion</a>
+            </li>
+        </ul>
+    </nav>
+-->
+    <mat-toolbar color="accent">
+        <a routerLink="/" class="navbar-brand">
+            <img src="/assets/images/logo.ico" width="30" height="30" class="d-inline-block align-top" alt="">&nbsp;Fatum
+        </a>
+        <span class="navbar-spacer"></span>
+        <a class="nav-link" routerLink="/test">
+            <i class="fa fa-code" aria-hidden="true"></i>&nbsp;Test
+        </a>
+        <a *ngIf="isLoggedIn" class="nav-link" routerLink="/connexion" (click)=handleLogout()>
+            <fa-icon [icon]="faSignOutAlt"></fa-icon>&nbsp;Déconnexion
+        </a>
+        <a *ngIf="!isLoggedIn" class="nav-link" routerLink="/connexion">
+            <fa-icon [icon]="faShieldAlt"></fa-icon>&nbsp;Connexion
+        </a>
+    </mat-toolbar>
+
+</header>

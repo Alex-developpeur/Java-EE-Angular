@@ -1,0 +1,19 @@
+<h2 mat-dialog-title><img src="/assets/images/warning.png" alt="">&nbsp;Suppression {{title}} !</h2>
+<mat-dialog-content class="mat-typography">
+	<p>Voulez-vous supprimer {{content}} ?</p>
+	<p>Cette action sera définitive.</p>
+</mat-dialog-content>
+<mat-dialog-actions align="end">
+	<div class="row mt-1">
+		<div class="clo-lg-1 mr-3">
+			<button mat-raised-button [mat-dialog-close]="true" cdkFocusInitial color="primary">
+				<fa-icon [icon]="faCheck"></fa-icon>&nbsp;Valider
+			</button>
+		</div>
+		<div class="clo-lg-12">
+			<button mat-raised-button [mat-dialog-close]="false" color="warn">
+				<fa-icon [icon]="faTimes"></fa-icon>&nbsp;Annuler
+			</button>
+		</div>
+	</div>
+</mat-dialog-actions>

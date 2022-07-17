@@ -1,0 +1,46 @@
+<h2 class="titre-page">Liste des groupes</h2>
+<div class="panel-body">
+	<table datatable [dtOptions]="dtOptions" class="row-border table-hover table-striped" *ngIf="groupes">
+		<thead>
+			<tr>
+				<th><i class="fa fa-database" aria-hidden="true"></i>&nbsp;id</th>
+				<th><i class="fa fa-users" aria-hidden="true"></i>&nbsp;Nom</th>
+				<th><i class="fa fa-align-left" aria-hidden="true"></i>&nbsp;Description</th>
+				<th class="text-center"><i class="fa fa-cogs" aria-hidden="true"></i>&nbsp;Action</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr *ngFor="let groupe of groupes">
+				<td>{{groupe.id}}</td>
+				<td>{{groupe.nom}}</td>
+				<td>{{groupe.description}}</td>
+				<td class="text-center">
+					<button mat-icon-button (click)="detailsGroupe(groupe.id)" class="btn btn-outline-success table-button">
+						<i class="fa fa-eye" aria-hidden="true"></i>
+					</button>
+					<button mat-icon-button (click)="updateGroupe(groupe.id)" class="btn btn-outline-info table-button">
+						<i class="fa fa-pencil-square-o" aria-hidden="true"></i>
+					</button>
+					<button mat-icon-button (click)="openDialog(groupe.id)" class="btn btn-outline-danger table-button">
+						<i class="fa fa-trash" aria-hidden="true"></i>
+					</button>
+				</td>
+			</tr>
+		</tbody>
+		<tfoot>
+			<tr>
+				<td>
+				</td>
+				<td>
+				</td>
+				<td>
+				</td>
+				<td class="text-center">
+					<button (click)="createGroupe()" class="btn">
+						<mat-icon>group_add</mat-icon>&nbsp;Créer un groupe
+					</button>
+				</td>
+			</tr>
+		</tfoot>
+	</table>
+</div>

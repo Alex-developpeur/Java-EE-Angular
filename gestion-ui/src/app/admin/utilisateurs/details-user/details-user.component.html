@@ -1,0 +1,44 @@
+<div class="row">
+	<div class="col-lg-10">
+		<h2 class="titre-page">Details de l'utilisateur</h2>
+		<hr class="mb-5">
+		<mat-card class="mat-elevation-z5">
+			<div *ngIf="utilisateur">
+				<div>
+					<label><b>ID : </b></label> {{utilisateur.id}}
+				</div>
+				<div>
+					<label><b>Nom : </b></label> {{utilisateur.nom}}
+				</div>
+				<div>
+					<label><b>E-mail : </b></label> {{utilisateur.email}}
+				</div>
+				<div>
+					<label><b>Mot de passe : </b></label> {{utilisateur.mdp}}
+				</div>
+				<div *ngFor="let groupe of utilisateur.groupesSet">
+					<label><b>Groupe : </b></label> {{ groupe.nom }}
+				</div>  
+			</div>
+		</mat-card>
+
+		<div class="row mt-5">
+			<div class="col-lg-4">
+				<button (click)="listUtilisateur()" mat-raised-button color="accent" class="w-100">
+					<i class="fa fa-list-alt" aria-hidden="true"></i>&nbsp;Liste des utilisateurs.
+				</button>
+			</div>
+			<div class="col-lg-4">
+				<button (click)="updateUtilisateur(utilisateur.id)" mat-raised-button color="primary" class="w-100">
+					<i class="fa fa-pencil-square-o" aria-hidden="true"></i>&nbsp;Editer
+				</button>
+			</div>
+			<div class="col-lg-4">
+				<button type="button" mat-raised-button (click)="openDialog(utilisateur.id)" color="warn" class="w-100">
+					<i class="fa fa-trash" aria-hidden="true"></i>&nbsp;Supprimer
+				</button>
+			</div>
+		</div>
+
+	</div>
+</div>
