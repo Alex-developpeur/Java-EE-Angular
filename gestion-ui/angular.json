@@ -132,5 +132,8 @@
 				}
 			}
 		}},
-		"defaultProject": "gestion-ui"
+    "defaultProject": "gestion-ui",
+    "cli": {
+      "analytics": false
+    }
 	}
