@@ -21,7 +21,7 @@ import javax.validation.Valid;
 
 @RestController
 @CrossOrigin(origins = "http://localhost:4200")
-@RequestMapping("/api/v1")
+@RequestMapping(value = "/api/v1")
 public class BasicAuthController extends AbstractController {
 
     Logger logger = LoggerFactory.getLogger(BasicAuthController.class);

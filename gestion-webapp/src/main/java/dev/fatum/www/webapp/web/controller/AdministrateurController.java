@@ -19,10 +19,10 @@ import java.util.Map;
 
 @RestController
 @CrossOrigin(origins = "http://localhost:4200")
-@RequestMapping("/api/v1")
+@RequestMapping(value = "/api/v1")
 public class AdministrateurController extends AbstractController {
 
-    Logger logger = LoggerFactory.getLogger(GroupesController.class);
+    Logger logger = LoggerFactory.getLogger(AdministrateurController.class);
 
     /**
      * Renvoie tous les {@link Administrateur}

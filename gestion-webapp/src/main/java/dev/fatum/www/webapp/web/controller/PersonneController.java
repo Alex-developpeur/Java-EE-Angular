@@ -17,10 +17,10 @@ import java.util.List;
 
 @RestController
 @CrossOrigin(origins = "http://localhost:4200")
-@RequestMapping("/api/v1")
+@RequestMapping(value = "/api/v1")
 public class PersonneController extends AbstractController {
 
-    Logger logger = LoggerFactory.getLogger(GroupesController.class);
+    Logger logger = LoggerFactory.getLogger(PersonneController.class);
 
     /**
      * Renvoie toutes les {@link Personne}
