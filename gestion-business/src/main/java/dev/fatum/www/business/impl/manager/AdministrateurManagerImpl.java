@@ -29,7 +29,7 @@ public class AdministrateurManagerImpl extends AbstractManagerImpl implements Ad
      * Enregistre l'{@link Administrateur}
      *
      * @param administrateur objet {@link Administrateur}
-     * @return Void
+     *
      */
     @Override
     public void saveAdministrateur(Administrateur administrateur) throws ResourceAlreadyExists {
@@ -93,7 +93,7 @@ public class AdministrateurManagerImpl extends AbstractManagerImpl implements Ad
      * Edite l'{@link Administrateur}
      *
      * @param administrateur objet {@link Administrateur}
-     * @return Void
+     *
      */
     @Override
     public void updateAdministrateur(Administrateur administrateur) throws ResourceAlreadyExists {
@@ -119,12 +119,13 @@ public class AdministrateurManagerImpl extends AbstractManagerImpl implements Ad
      *
      * @param id identifiant de l'{@link Administrateur}
      *
-     * @return Void
      */
     @Override
     public void deleteAdministrateurById(int id) {
-        getDaoFactory().getAdministrateurDao().deleteById(id);
-        logger.info("##### AdministrateurManagerImpl : administrateur " + id + " supprimé.");
+        if(findAdministrateurById(id) != null) {
+            getDaoFactory().getAdministrateurDao().deleteById(id);
+            logger.info("##### AdministrateurManagerImpl : administrateur " + id + " supprimé.");
+        }
     }
 
     /**
